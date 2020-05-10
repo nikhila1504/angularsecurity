@@ -1,0 +1,35 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Vendor List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Vendors</th>
+                <th>Vendor Name</th>
+                <th>Mobile No </th>
+                <th>City</th>
+                <th>Email</th>
+                <th></th>
+                </tr>
+            </thead>
+        <tbody>
+          <tr *ngFor="let c of vendors | async">
+            <td>{{c.vendorId}}</td>
+                <td>{{c.vendorName}}</td>
+                <td>{{c.mobileNo}}</td>
+                <td>{{c.city}}</td>
+                <td>{{c.emailId}}</td>
+            <td><button (click)="deleteVendor(c.vendorId)" class="btn btn-danger">Delete</button>
+                <button (click)="updateVendor(c.vendorId)" class="btn btn-info" style="margin-left: 10px">Update</button>
+                <button (click)="vendorDetails(c.vendorId)" class="btn btn-info" style="margin-left: 10px">Details</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <a class="btn btn-success  mr-2" href="add">Add Vendor</a>
+      </tfoot>
+      </table>
+    </div>
+  </div>

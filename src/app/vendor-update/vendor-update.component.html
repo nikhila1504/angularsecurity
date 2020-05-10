@@ -1,0 +1,26 @@
+<p>vendor-update works!</p>
+<div >
+    <form (ngSubmit)="onSubmit()">
+      
+      <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="Name" required [(ngModel)]="vendor.vendorName" name="name">
+        </div>
+    
+        <div class="form-group">
+          <label for="name">Address</label>
+          <input type="text" class="form-control" id="address" required [(ngModel)]="vendor.city" name="city">
+        </div>
+        <div class="form-group">
+            <label for="name">MobileNo</label>
+            <input type="text" class="form-control" id="MobileNo" required [(ngModel)]="vendor.mobileNo" name="mobileNo">
+          </div>
+    
+        <div class="form-group">
+          <label for="name">EmailId</label>
+          <input type="text" class="form-control" id="emailId" required [(ngModel)]="vendor.emailId" name="emailId">
+        </div>
+  
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>

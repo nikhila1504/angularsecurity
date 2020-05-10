@@ -1,0 +1,18 @@
+<h2>VendorDetails</h2> 
+
+<hr/>
+<div *ngIf="vendor">
+  <div>
+    <label><b> Product Name: </b></label> {{vendor.productName}}
+  </div>
+  <div>
+    <label><b>City: </b></label> {{vendor.price}}
+  </div>
+  <div>
+    <label><b>Product Description: </b></label> {{vendor.productDescription}}
+  </div>  
+</div>
+<!-- </li> -->
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Vendor List</button><br>
